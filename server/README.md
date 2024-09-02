@@ -58,7 +58,6 @@ Where:
 * <b>Genders:</b>  List of genders.
 * <b>Users:</b> List of users.
 
-
-![Captura de pantalla 2024-03-27 151648](https://github.com/fmonte2022/extendeal_server/assets/104769503/e71ae5e4-8677-4de7-bd48-bb6b11fba942)
+<img width="1363" alt="Captura de pantalla 2024-09-02 a las 19 39 13" src="https://github.com/user-attachments/assets/0e768287-d407-4103-935c-d313d8eb0656">
 
 [toc]: #content "Go to table of contents"
