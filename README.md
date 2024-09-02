@@ -1,63 +1,63 @@
 # ClearMechanic - Challenge
-En este documento se detallará los pasos para la instalación del server.
+This document will detail the steps for installing the server.
 
-#### Contenido
+#### Content
 
-- [Instalación de Docker](#instalación-de-docker)
-- [Creación de la imagen docker del Server](#creación-de-la-imagen-docker-del-server)
-- [Creación de la imagen docker del Server](#creación-de-la-imagen-docker-del-server)
-- [Creación del contenedor de Docker utilizando la imagen creada](#creación-del-contenedor-de-docker-utilizando-la-imagen-creada)
-- [Finalización de instalación](#finalización-de-instalación)
+- [Docker Installation](#docker-instalation)
+- [Creating the server docker image](#creating-the-server-docker-image)
+- [Creating the Docker container using the created image](#creating_the_docker_container_using_the_created_image)
+- [Installation completion](#installation_completion)
   
 <br>
 
-## [Instalación de Docker][toc]
+## [Docker Installation][toc]
 
-En el caso que no se tenga instalado el motor de Docker se debe instalar usando el siguiente link: https://docs.docker.com/engine/install/
+In case the Docker engine is not installed, it must be installed using the following link: https://docs.docker.com/engine/install/
 
 <br>
 
-## [Creación de la imagen docker del Server][toc]
+## [Creating the server docker image][toc]
 
-### Opción 1 - Creación desde el IDE (VsCode) + Extensión Docker
+### Option 1 - Creation from the IDE (VsCode) + Extension Docker
 
-Desde el IDE (VsCode) instalar la extensión oficial de Docker y luego ejecutar el <b>Build image</b> sobre el archivo <b>"Dockerfile"</b>. </br></br>
-<b>Nota:</b> Indicar el nombre de imagen que deseen. Sugerencia de formato <b>[USER_GIT_HUB]/[NAME_SERVER]:latest</b>
+From the IDE (VsCode) install the official Docker extension and then run the <b>Build image</b> about the file <b>"Dockerfile"</b>. </br></br>
+<b>Note:</b> Please indicate the name of the image you want. Format suggestion <b>[USER_GIT_HUB]/[NAME_SERVER]:latest</b>
 
-### Opción 2 - Por linea de comando
+### Option 2 - By command line
 
-Desde la terminal, ir a la carpeta del proyecto y ejecutar el siguiente comando:
+From the terminal, go to the project folder and run the following command:
 ```
 docker build . -t [USER_GIT_HUB]/[NAME_SERVER]:latest
 ```
 
 <br>
 
-## [Creación del contenedor de Docker utilizando la imagen creada][toc]
+## [Creating the Docker container using the created image][toc]
 
-Desde la terminal ejecutar el comando: 
+From the terminal run the command: 
 ```\
 docker run -d -p [PORT]:3001 [IMAGE_NAME]
 ```
 </br>
-<b>Nota:</b> Como <b>PORT</b> pueden utilizar 3001 que es el valor por default, pero si el puerto se tiene ocupado por otra aplicación podrían cambiarlo.
+<b>Note:</b> As <b>PORT</b> you can use 3001 which is the default value, but if the port is occupied by another application you could change it.
 
 <br>
 
-## [Finalización de instalación][toc]
+## [Installation completion][toc]
 
-Una vez que el contenedor este corriendo se podrá validar desde su navegador que la URL: http://localhost:[PORT]/ se este ejecutando correctamente, donde deberá visualizar los siguientes recursos: </br>
+Once the container is running you can validate from your browser that the URL: http://localhost:[PORT]/ is running correctly, where you should see the following resources: </br>
 
 ### `/movies`
 ###  `/actors`
+###  `/genders`
 ###  `/users`
 
-Donde: 
-* <b>Peliculas:</b> Listado de peliculas
-* <b>Actores:</b>  Actores pertenecientes a las peliculas.
-* <b>Usuarios:</b> Usuarios permitidos por la aplicación
+Where: 
+* <b>Movies:</b> List of movies.
+* <b>Actors:</b>  List of actors.
+* <b>Genders:</b>  List of genders.
+* <b>Users:</b> List of users.
 
+<img width="1363" alt="Captura de pantalla 2024-09-02 a las 19 39 13" src="https://github.com/user-attachments/assets/0e768287-d407-4103-935c-d313d8eb0656">
 
-![Captura de pantalla 2024-03-27 151648](https://github.com/fmonte2022/extendeal_server/assets/104769503/e71ae5e4-8677-4de7-bd48-bb6b11fba942)
-
-[toc]: #contenido "Ir a la tabla de contenidos"
+[toc]: #content "Go to table of contents"
