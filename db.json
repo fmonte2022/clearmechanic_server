@@ -1,0 +1,85 @@
+{ 
+ "movies": [ 
+    { 
+      "id": 1,
+      "title": "Piratas del Caribe",
+      "genderId": 2,
+      "createdAt": "2024-03-22T10:10:00",
+      "year": "2011",
+      "active": true,
+      "deletedAt": null,
+      "updatedAt": null,
+      "actors": "Johnny Depp, Orlando Bloom"
+    },
+    { 
+      "id": 2,
+      "title": "Rocky IV",
+      "genderId": 5,
+      "createdAt": "2024-03-22T10:10:00",
+      "year": "1990",
+      "active": true,
+      "deletedAt": null,
+      "updatedAt": null,
+      "actors": "Sylvester Stallone, Carl Weathers"
+    }
+  ],
+  "genders": [
+    {
+      "id": 1,
+      "nameEs": "Acción",
+      "nameEn": "Action"
+    },
+    {
+      "id": 2,
+      "nameEs": "Aventura",
+      "nameEn": "Adventure"
+    },
+    {
+      "id": 3,
+      "nameEs": "Terror",
+      "nameEn": "Terror"
+    },
+    {
+      "id": 4,
+      "nameEs": "Comedia",
+      "nameEn": "Comedy"
+    },
+    {
+      "id": 5,
+      "nameEs": "Drama",
+      "nameEn": "Drama"
+    }
+  ],
+  "actors": [
+    {
+      "id": 1,
+      "name": "Johnny Depp"
+    },
+    {
+      "id": 2,
+      "name": "Orlando Bloom"
+    },
+    {
+      "id": 3,
+      "name": "Sylvester Stallone"
+    },
+    {
+      "id": 4,
+      "name": "Carl Weathers"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Administrador",
+      "userName": "admin",
+      "password": "21232f297a57a5a743894a0e4a801fc3"
+    },
+    {
+      "id": 3,
+      "name": "Montenegro Francisco",
+      "userName": "fmonte",
+      "password": "21232f297a57a5a743894a0e4a801fc3"
+    }
+  ]
+}
