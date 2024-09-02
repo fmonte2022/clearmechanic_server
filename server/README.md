@@ -1,9 +1,9 @@
 # ClearMechanic - Challenge
-En este documento se detallará los pasos para la instalación del server.
+This document will detail the steps for installing the server.
 
-#### Contenido
+#### Content
 
-- [Instalación de Docker](#instalación-de-docker)
+- [Docker Installation](#docker-instalation)
 - [Creación de la imagen docker del Server](#creación-de-la-imagen-docker-del-server)
 - [Creación de la imagen docker del Server](#creación-de-la-imagen-docker-del-server)
 - [Creación del contenedor de Docker utilizando la imagen creada](#creación-del-contenedor-de-docker-utilizando-la-imagen-creada)
@@ -11,7 +11,7 @@ En este documento se detallará los pasos para la instalación del server.
   
 <br>
 
-## [Instalación de Docker][toc]
+## [Docker Installation][toc]
 
 En el caso que no se tenga instalado el motor de Docker se debe instalar usando el siguiente link: https://docs.docker.com/engine/install/
 
