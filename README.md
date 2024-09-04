@@ -5,7 +5,8 @@ This document will detail the steps for installing the server.
 
 - [Docker Installation](#docker-instalation)
 - [Creating the server docker image](#creating-the-server-docker-image)
-- [Creating the Docker container using the created image](#creating_the_docker_container_using_the_created_image)
+- [Update connection strings](#update-connection-strings)
+- [Creating the Database](#creating-the-database)
 - [Installation completion](#installation_completion)
   
 <br>
@@ -37,36 +38,28 @@ docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=[reallyStrongPwd123]" -e "MS
 
 If you change the password used in the <b>Step 2</b> above should be changed the password on the ConnectionStrings of the API. For this open the Solution and then go the <b>appsettings.json</b> file.
 
+```
  "ConnectionStrings": {
     "DefaultConnection": "Server=localhost,1433;Database=ClearMechanicMovies;Trusted_Connection=false;User Id=sa;Password=<b>[reallyStrongPwd123]</b>;Persist Security Info=False;Encrypt=False"
  }
-
-## [Creating the Docker container using the created image][toc]
-
-From the terminal run the command: 
-```\
-docker run -d -p [PORT]:3001 [IMAGE_NAME]
 ```
-</br>
-<b>Note:</b> As <b>PORT</b> you can use 3001 which is the default value, but if the port is occupied by another application you could change it.
+
+## [Creating the Database][toc]
+
+From the terminal of the IDE (Vs) run the following command: 
+```
+ dotnet ef database update
+```
+
+<b>Note:</b> With this command should be created the database and executed the inserts by default.
 
 <br>
 
 ## [Installation completion][toc]
 
-Once the container is running you can validate from your browser that the URL: http://localhost:[PORT]/ is running correctly, where you should see the following resources: </br>
+Once the table is created run the API from the IDE </br>
 
-### `/movies`
-###  `/actors`
-###  `/genders`
-###  `/users`
+<img width="1285" alt="Captura de pantalla 2024-09-04 a las 10 14 21" src="https://github.com/user-attachments/assets/e1e97fa4-0fe8-45e0-9497-468c660ca295">
 
-Where: 
-* <b>Movies:</b> List of movies.
-* <b>Actors:</b>  List of actors.
-* <b>Genders:</b>  List of genders.
-* <b>Users:</b> List of users.
-
-<img width="1363" alt="Captura de pantalla 2024-09-02 a las 19 39 13" src="https://github.com/user-attachments/assets/0e768287-d407-4103-935c-d313d8eb0656">
 
 [toc]: #content "Go to table of contents"
