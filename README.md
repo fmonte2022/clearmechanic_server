@@ -18,17 +18,14 @@ In case the Docker engine is not installed, it must be installed using the follo
 
 ## [Creating the server docker image][toc]
 
-### Option 1 - Creation from the IDE (VsCode) + Extension Docker
+### Step 1 - By command line
 
-From the IDE (VsCode) install the official Docker extension and then run the <b>Build image</b> about the file <b>"Dockerfile"</b>. </br></br>
-<b>Note:</b> Please indicate the name of the image you want. Format suggestion <b>[USER_GIT_HUB]/[NAME_SERVER]:latest</b>
-
-### Option 2 - By command line
-
-From the terminal, go to the project folder and run the following command:
+From the terminal, run the following command:
 ```
-docker build . -t [USER_GIT_HUB]/[NAME_SERVER]:latest
+docker pull mcr.microsoft.com/azure-sql-edge
 ```
+<b>Official container images for Microsoft Azure SQL Edge for docker engine<b>
+
 
 <br>
 
