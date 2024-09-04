@@ -33,6 +33,14 @@ From the terminal, run the following command in order to create the docker conta
 docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=[reallyStrongPwd123]" -e "MSSQL_PID=Developer" -e "MSSQL_USER=SA" -p 1433:1433 -d --name=sql mcr.microsoft.com/azure-sql-edge
 ```
 
+## [Update connection strings][toc]
+
+If you change the password used in the <b>Step 2</b> above should be changed the password on the ConnectionStrings of the API. For this open the Solution and then go the <b>appsettings.json</b> file.
+
+ "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost,1433;Database=ClearMechanicMovies;Trusted_Connection=false;User Id=sa;Password=<b>[reallyStrongPwd123]</b>;Persist Security Info=False;Encrypt=False"
+ }
+
 ## [Creating the Docker container using the created image][toc]
 
 From the terminal run the command: 
