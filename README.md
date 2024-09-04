@@ -1,4 +1,4 @@
-# ClearMechanic - Challenge
+# ClearMechanic - Challenge - Server
 This document will detail the steps for installing the server.
 
 #### Content
@@ -24,7 +24,7 @@ From the terminal, run the following command:
 ```
 docker pull mcr.microsoft.com/azure-sql-edge
 ```
-<b>Official container images for Microsoft Azure SQL Edge for docker engine<b>
+<b>Official container images for Microsoft Azure SQL Edge for docker engine</b>
 
 ### Step 2 - Creating the Docker container
 
