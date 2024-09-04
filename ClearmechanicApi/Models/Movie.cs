@@ -16,7 +16,5 @@ namespace ClearmechanicApi.Models
         public int Year { get; set; }
 
         public List<MovieActor>? MovieActors { get; }
-
-        public List<Actor>? Actors { get; }
     }
 }

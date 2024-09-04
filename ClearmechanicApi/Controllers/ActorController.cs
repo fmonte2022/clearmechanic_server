@@ -22,7 +22,7 @@ namespace ClearmechanicApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Actor>>> GetActors()
         {
-            return await _context.Actor.ToListAsync();
+            return await _context.Actors.ToListAsync();
         }
     }
 }

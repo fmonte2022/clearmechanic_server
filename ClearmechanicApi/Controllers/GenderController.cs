@@ -18,6 +18,6 @@ public class GenderController : Controller
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Gender>>> GetGenders()
     {
-        return await _context.Gender.ToListAsync();
+        return await _context.Genders.ToListAsync();
     }
 }

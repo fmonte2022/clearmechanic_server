@@ -18,14 +18,14 @@ public class UserController : Controller
     [HttpGet]
     public async Task<ActionResult<IEnumerable<User>>> GetUsers()
     {
-        return await _context.User.ToListAsync();
+        return await _context.Users.ToListAsync();
     }
 
     // GET: api/users/validateUser?userName=a&password=b
     [HttpGet("validateUser")]
     public async Task<ActionResult<User>> ValidateUser(String userName, String password)
     {
-        var user = await _context.User.Where(u => u.Username == userName && u.Password == password).FirstOrDefaultAsync();
+        var user = await _context.Users.Where(u => u.Username == userName && u.Password == password).FirstOrDefaultAsync();
 
         if (user == null)
         {

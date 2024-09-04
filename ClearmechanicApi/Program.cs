@@ -20,8 +20,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(
     )
 );
 
-builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options => options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-
 var mapperConfig = new MapperConfiguration(m =>
 {
     m.AddProfile(new MappingProfile());

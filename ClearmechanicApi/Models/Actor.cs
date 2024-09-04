@@ -11,9 +11,6 @@ namespace ClearmechanicApi.Models
 
         [JsonIgnore]
         public List<MovieActor>? MovieActors { get; }
-
-        [JsonIgnore]
-        public List<Movie>? Movies { get; }
     }
 }
 

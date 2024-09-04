@@ -22,7 +22,7 @@ public class MovieController : Controller
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
     {
-        return await _context.Movie.ToListAsync();
+        return await _context.Movies.ToListAsync();
     }
 
     // GET: api/Movie/getByFilter?page=0&limit=10&q=xxxx&genderId=1&title=xxxx&actors=yyyyy
@@ -32,7 +32,7 @@ public class MovieController : Controller
         //filter movies by criteria
         if (q != null && q.Length > 0)
         {
-            var movies = await _context.Movie.Include(m => m.Gender).Include(m => m.MovieActors!).ThenInclude(m => m.Actor).Where(
+            var movies = await _context.Movies.Include(m => m.Gender).Include(m => m.MovieActors!).ThenInclude(m => m.Actor).Where(
                 m => Convert.ToString(m.Year) == q || m.Title!.Contains(q) ||
                     m.Gender!.NameEn!.Contains(q) || m.Gender!.NameEs!.Contains(q) ||
                     m.MovieActors!.Any(a => a.Actor!.Name!.Contains(q))
@@ -45,7 +45,7 @@ public class MovieController : Controller
         //filter movies by gender and title and actors
         if (genderId != null || title != null || actors != null)
         {
-            var movies = await _context.Movie.Include(m => m.Gender).Include(m => m.MovieActors!).ThenInclude(m => m.Actor).Where(
+            var movies = await _context.Movies.Include(m => m.Gender).Include(m => m.MovieActors!).ThenInclude(m => m.Actor).Where(
                m => (genderId != null && m.GenderId == genderId || genderId == null) &&
                    (title != null && m.Title!.Contains(title) || title == null) &&
                     (actors != null && m.MovieActors!.Any(a => a.Actor!.Name!.Contains(actors)) || actors == null)
@@ -56,7 +56,7 @@ public class MovieController : Controller
         else
         {
             //get all movies without filters
-            var movies = await _context.Movie.Include(m => m.Gender).Include(m => m.MovieActors!).ThenInclude(m => m.Actor).ToListAsync();
+            var movies = await _context.Movies.Include(m => m.Gender).Include(m => m.MovieActors!).ThenInclude(m => m.Actor).ToListAsync();
             return new MovieResponseDTO(_mapper.Map<List<MovieDTO>>(movies.Skip(page * limit).Take(limit).ToList()), movies.Count);
         }
     }
