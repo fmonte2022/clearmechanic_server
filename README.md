@@ -18,7 +18,7 @@ In case the Docker engine is not installed, it must be installed using the follo
 
 ## [Creating the server docker image][toc]
 
-### Step 1 - By command line
+### Step 1 - Creating the MA SQL docker image
 
 From the terminal, run the following command:
 ```
@@ -32,7 +32,6 @@ From the terminal, run the following command in order to create the docker conta
 ```
 docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=[reallyStrongPwd123]" -e "MSSQL_PID=Developer" -e "MSSQL_USER=SA" -p 1433:1433 -d --name=sql mcr.microsoft.com/azure-sql-edge
 ```
-
 
 ## [Creating the Docker container using the created image][toc]
 
